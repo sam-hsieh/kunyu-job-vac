@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>軍民專長轉銜專區</title>
+   
+    <link href="css/material-symbols-outlined.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/output.css" rel="stylesheet">
+    <script src="js/chart.js"></script>
+    <script src="js/chartjs-plugin-datalabels.js"></script>
+</head>
+
+<body class="bg-slate-100 min-h-screen p-4 md:p-8">
+
+    <div class="container mx-auto space-y-10 pb-20">
+        <!-- 職務概覽 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+            <!-- 左側紫色卡片 -->
+            <div
+                class="lg:col-span-4 bg-[#9147D2] rounded-lg p-8 text-white flex flex-col justify-center  shadow-sm">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-wider">010101</h2>
+                    <h1 class="text-4xl font-extrabold mt-2 pb-8">經營管理主管</h1>
+                </div>
+                <div class="mt-auto pt-8 border-t border-purple-400/30">
+                    <p class="text-sm opacity-90 mb-2 font-medium">標準職業編碼及名稱</p>
+                    <p class="text-lg font-bold">1120 總經理及總執行長</p>
+                </div>
+            </div>
+
+            <!-- 中間職務簡介與按鈕 -->
+            <div class=" lg:col-span-8 bg-white rounded-lg p-6 shadow-sm flex flex-col border border-gray-100">
+                <h3 class="text-gray-400 font-medium mb-3 text-sm">職務簡介</h3>
+                <p id="job-desc" class="text-[#0056b3] leading-relaxed mb-6 font-medium">負責企業或組織的營運策略規劃，並指導及協調各項相關工作事宜。
+                </p>
+                <div class="mt-auto grid grid-cols-1 lg:grid-cols-12 gap-3">
+                    <a href="javascript:;"
+                        class="xl:col-span-4 md:col-span-4 w-f bg-[#72C130] text-white py-3 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined">search</span>本會工作機會查詢
+                    </a>
+                    <a href="javascript:;"
+                        class="xl:col-span-4 md:col-span-4 w-f bg-[#D63384] text-white py-3 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined">description</span>勞動部工作機會查詢
+                    </a>
+                    <a href="javascript:;"
+                        class="xl:col-span-4 md:col-span-4 w-f bg-[#6F42C1] text-white py-3 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined">menu_book</span>本會職訓課程查詢
+                    </a>
+                    <a href="javascript:;"
+                        class="xl:col-span-4 md:col-span-6 bg-[#72C130] text-white py-3 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined">stacks</span>勞動部在職訓練課程查詢
+                    </a>
+                    <a href="javascript:;"
+                        class="xl:col-span-4 md:col-span-6 w-f bg-[#D63384] text-white py-3 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined">search_insights</span>勞動部職前訓練課程查詢
+                    </a>
+                </div>
+            </div>
+
+            <!-- 軍職專長 -->
+            <div class="lg:col-span-12 bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col">
+                <h3 class="text-[#9147D2] font-bold text-xl mb-4">軍職專長</h3>
+                <div
+                    class="border border-gray-300 rounded-md overflow-hidden flex-1 custom-scrollbar overflow-y-auto max-h-[320px]">
+                    <div class="grid grid-cols-1 md:grid-cols-2 text-[#0056b3] font-medium divide-y divide-gray-100">
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
+                                class="text-sm">(專長代碼：4C00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工部隊指揮官</span><span
+                                class="text-xs">(專長代碼：CA11)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
+                                class="text-sm">(專長代碼：4C00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
+                                class="text-sm">(專長代碼：4C00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工部隊指揮官</span><span
+                                class="text-xs">(專長代碼：CA11)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
+                                class="text-sm">(專長代碼：4C00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
+                                class="text-sm">(專長代碼：4C00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工部隊指揮官</span><span
+                                class="text-xs">(專長代碼：CA11)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                        <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
+                                class="text-sm">(專長代碼：4C00)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 工作內容 -->
+        <div class="space-y-4">
+            <div class="flex items-center gap-2">
+                <div class="bg-[#D63384] text-white rounded-full w-6 h-6 flex items-center justify-center font-bold">
+                    <span class="material-symbols-outlined text-[16px]">info</span>
+                </div>
+                <h2 class="text-xl font-bold text-gray-800">工作內容</h2>
+            </div>
+            <div class="flex flex-col">
+                <!-- 標籤分頁 -->
+                <div class="flex gap-1 overflow-x-auto" id="job-content-tabs">
+                    <button onclick="changeTab('knowledge')" id="tab-knowledge"
+                        class="px-16 py-3 bg-white rounded-t-lg border-t-4 border-[#D63384] font-bold text-gray-800 shadow-sm border-x border-gray-100 z-10 whitespace-nowrap">知識</button>
+                    <button onclick="changeTab('skills')" id="tab-skills"
+                        class="px-16 py-3 bg-[#E9ECEF] hover:bg-gray-200 rounded-t-lg font-bold text-gray-600 transition-colors whitespace-nowrap">技能</button>
+                    <button onclick="changeTab('abilities')" id="tab-abilities"
+                        class="px-16 py-3 bg-[#E9ECEF] hover:bg-gray-200 rounded-t-lg font-bold text-gray-600 transition-colors whitespace-nowrap">能力</button>
+                </div>
+                <!-- 內容區塊 -->
+                <div class="bg-white rounded-b-lg rounded-tr-lg p-8 shadow-sm border border-gray-100 -mt-[1px]">
+                    <div class="flex flex-col md:flex-row gap-12">
+                        <!-- 左側子選單 -->
+                        <div class="w-full md:w-1/3 flex flex-col space-y-1" id="job-submenu">
+                            <!-- 由 JavaScript 動態生成 -->
+                        </div>
+                        <!-- 右側說明文字 -->
+                        <div class="w-full md:w-2/3 flex items-start pt-4">
+                            <p id="tab-description"
+                                class="text-gray-600 leading-loose text-lg font-medium transition-opacity duration-300">
+                                <!-- 由 JavaScript 動態填入 -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 學歷與科系要求 -->
+        <div class="grid grid-cols-1 gap-8">
+            <!-- 學歷要求 -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 text-[#72C130]">
+                    <span class="material-symbols-outlined text-[24px]">school</span>
+                    <h2 class="text-xl font-bold text-gray-800">學歷要求</h2>
+                </div>
+                <div class="bg-white rounded-lg p-10 shadow-sm border border-gray-100">
+                    <div class="chart-container"><canvas id="educationChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- 科系要求 -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 text-[#D63384]">
+                    <span class="material-symbols-outlined text-[24px]">construction</span>
+                    <h2 class="text-xl font-bold text-gray-800">科系要求</h2>
+                </div>
+                <div class="bg-white rounded-lg p-10 shadow-sm border border-gray-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+                        <div class="space-y-6">
+                            <div class="space-y-2">
+                                <div class="flex items-baseline gap-2"><span
+                                        class="text-xl font-extrabold text-black">95%</span><span
+                                        class="text-gray-500 font-medium text-lg">其他</span></div>
+                                <div class="w-full h-3 bg-[#EDF5FF] rounded-full overflow-hidden">
+                                    <div class="h-full bg-[#D63384]" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-baseline gap-2"><span
+                                        class="text-xl font-extrabold text-black">85%</span><span
+                                        class="text-gray-500 font-medium text-lg">職業醫學與工業衛生研究所</span></div>
+                                <div class="w-full h-3 bg-[#EDF5FF] rounded-full overflow-hidden">
+                                    <div class="h-full bg-[#D63384]" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="space-y-2">
+                                <div class="flex items-baseline gap-2"><span
+                                        class="text-xl font-extrabold text-black">90%</span><span
+                                        class="text-gray-500 font-medium text-lg">機械工程學類</span></div>
+                                <div class="w-full h-3 bg-[#EDF5FF] rounded-full overflow-hidden">
+                                    <div class="h-full bg-[#D63384]" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-baseline gap-2"><span
+                                        class="text-xl font-extrabold text-black">50%</span><span
+                                        class="text-gray-500 font-medium text-lg">社會工作學系</span></div>
+                                <div class="w-full h-3 bg-[#EDF5FF] rounded-full overflow-hidden">
+                                    <div class="h-full bg-[#D63384]" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 趨勢圖 -->
+        <div class="space-y-12">
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 space-y-4">
+                <div class="flex items-center gap-2 text-[#0056b3]">
+                    <span class="material-symbols-outlined text-[24px]">trending_up</span>
+                    <h2 class="text-xl font-bold text-gray-800">經常性薪資</h2>
+                </div>
+                <div class="chart-container"><canvas id="salaryChart"></canvas></div>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 space-y-4">
+                <div class="flex items-center gap-2 text-[#2D6A4F]">
+                    <span class="material-symbols-outlined text-[24px]">layers</span>
+                    <h2 class="text-xl font-bold text-gray-800">職務空缺數</h2>
+                </div>
+                <div class="chart-container"><canvas id="vacanciesChart"></canvas></div>
+            </div>
+        </div>
+        <!-- 轉職方向  -->
+        <div class="space-y-4">
+            <div class="flex items-center gap-2 text-orange-500">
+                <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+                <h2 class="text-xl font-bold text-gray-800">轉職方向</h2>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:items-center">
+                <!-- 來源職務 -->
+                <div
+                    class="lg:w-1/3 bg-[#cfe2ff] p-6 lg:py-8 rounded-lg flex items-center justify-center font-bold text-xl text-center shadow-sm h-fit">
+                    <span>經營管理主管</span>
+                    <!-- 電腦版向右箭頭 -->
+                    <span class="material-symbols-outlined text-blue-600 hidden lg:block">chevron_right</span>
+                    <!-- 手機版向下箭頭 -->
+                    <span class="material-symbols-outlined text-blue-600 block lg:hidden ml-2 font-black">expand_more</span>
+                </div>
+
+                <!-- 目標職務網格  -->
+                <div class="lg:w-2/3 grid grid-cols-2 gap-4">
+                    <div
+                        class="bg-[#e2d9f3] p-6 rounded-lg font-bold text-center text-lg flex items-center justify-center shadow-sm">
+                        業務主管</div>
+                    <div
+                        class="bg-[#c5b3f0] p-6 rounded-lg font-bold text-center text-lg flex items-center justify-center shadow-sm">
+                        行銷企劃部門主管</div>
+                    <!-- 最後一個佔滿兩欄 -->
+                    <div
+                        class="bg-[#aeece6] p-6 rounded-lg font-bold text-center text-lg col-span-2 flex items-center justify-center shadow-sm">
+                        行政總務主管</div>
+                </div>
+            </div>
+        </div>
+        <!-- 風格雷達圖 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-4 bg-white rounded-xl p-8 shadow-sm border border-gray-100 h-full space-y-4">
+                <div class="flex items-center gap-2 text-[#0d6efd]">
+                    <span class="material-symbols-outlined">list</span>
+                    <h2 class="text-xl font-bold text-gray-800">職能基準</h2>
+                </div>
+                <ul class="space-y-4 pt-4">
+                    <li class="flex items-center gap-3 border-b border-blue-50 pb-3 font-bold text-[#0056b3] text-lg">
+                        中小型企業經理</li>
+                    <li class="flex items-center gap-3 border-b border-blue-50 pb-3 font-bold text-[#0056b3] text-lg">
+                        工業理事長</li>
+                </ul>
+            </div>
+            <div class="lg:col-span-8 bg-white rounded-xl p-8 shadow-sm border border-gray-100 space-y-4">
+                <div class="flex items-center gap-2 text-[#0d6efd]">
+                    <span class="material-symbols-outlined"
+                       >manufacturing</span>
+                    <h2 class="text-xl font-bold text-gray-800">工作風格</h2>
+                </div>
+                <div class="radar-chart-container lg:h-[500px] md:h-fit"><canvas id="workStyleChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Tab 與子選單資料
+        const tabData = {
+            knowledge: {
+                items: [{
+                    name: "管理",
+                    desc: "商業與管理原則的知識，包含策略規劃、資源配置、人力資源模式、領導技術、生產方法及人力與資源的協調，並且針對法律、法典、法院程序、先例、政府法規、行政命令、機構規則和民主政治程序的知識。"
+                },
+                {
+                    name: "客戶和個人服務",
+                    desc: "提供客戶與個人服務的原則與流程知識。這包含評估客戶需求、符合品質標準的服務，以及對客戶滿意度的評估。"
+                },
+                {
+                    name: "經濟學和會計學",
+                    desc: "有關經濟學與會計學原理及實務應用、金融市場、銀行業以及對財務與報告知識。"
+                }
+                ]
+            },
+            skills: {
+                items: [{
+                    name: "判斷與決策",
+                    desc: "考慮潛在行動的相對成本與效益，以選擇最合適的一個。具備高階決策能力是主管的核心價值。"
+                },
+                {
+                    name: "資源管理",
+                    desc: "資源（如人力、物力、財力）以達成組織目標，並優化生產流程。"
+                },
+                {
+                    name: "關鍵思考",
+                    desc: "使用邏輯與推理來識別各種解決方案、結論或處理問題方法的優缺點。"
+                }
+                ]
+            },
+            abilities: {
+                items: [{
+                    name: "演繹推理",
+                    desc: "將一般規則應用於特定問題，以產生合理答案的能力。這包含在紛亂的資訊中找出邏輯關聯。"
+                },
+                {
+                    name: "歸納推理",
+                    desc: "將分散的資訊組合在一起，形成一般規則或結論的能力（包括在看起來不相關的事件中找到關聯）。"
+                },
+                {
+                    name: "問題敏感度",
+                    desc: "能夠辨識何時發生錯誤或可能發生錯誤的能力。這並不涉及解決問題，而僅僅是意識到問題的存在。"
+                }
+                ]
+            }
+        };
+
+        // 當前狀態
+        let currentMainTab = 'knowledge';
+        let currentSubIndex = 0;
+
+        // 切換主 Tab
+        function changeTab(tabKey) {
+            currentMainTab = tabKey;
+            currentSubIndex = 0; // 時預設選中第一個子項
+
+            const tabButtons = document.querySelectorAll('#job-content-tabs button');
+            tabButtons.forEach(btn => {
+                const isTarget = btn.id === `tab-${tabKey}`;
+                btn.className = isTarget ?
+                    "px-16 py-3 bg-white rounded-t-lg border-t-4 border-[#D63384] font-bold text-gray-800 shadow-sm border-x border-gray-100 z-10 whitespace-nowrap" :
+                    "px-16 py-3 bg-[#E9ECEF] hover:bg-gray-200 rounded-t-lg font-bold text-gray-600 transition-colors whitespace-nowrap";
+            });
+
+            updateSubmenu();
+        }
+
+        // 切換子選單項目
+        function selectSubItem(index) {
+            currentSubIndex = index;
+            updateSubmenu();
+        }
+
+        // 更新子選單 UI 與說明文字
+        function updateSubmenu() {
+            const data = tabData[currentMainTab];
+            const submenuEl = document.getElementById('job-submenu');
+            const descriptionEl = document.getElementById('tab-description');
+
+            // 1. 生成子選單按鈕
+            submenuEl.innerHTML = data.items.map((item, index) => {
+                const isActive = index === currentSubIndex;
+                const activeClasses = isActive ? 'bg-[#FDF2F8] border-[#D63384]' : 'border-pink-100 hover:bg-pink-50';
+                const iconOpacity = isActive ? '' : 'opacity-40';
+
+                return `
+                    <button onclick="selectSubItem(${index})" class="flex justify-between items-center border-b-2 ${activeClasses} p-3 text-[#D63384] font-bold text-xl transition-all group text-left">
+                        <span>${item.name}</span>
+                        <!-- 手機版顯示 expand_more，電腦版顯示 chevron_right -->
+                        <span class="material-symbols-outlined lg:hidden ${iconOpacity}">expand_more</span>
+                        <span class="material-symbols-outlined hidden lg:block ${iconOpacity}">chevron_right</span>
+                    </button>
+                `;
+            }).join('');
+
+            // 2. 更新右側描述文字 (加上淡入效果)
+            descriptionEl.style.opacity = '0';
+            setTimeout(() => {
+                descriptionEl.textContent = data.items[currentSubIndex].desc;
+                descriptionEl.style.opacity = '1';
+            }, 100);
+        }
+
+        // 圖表初始化資料
+        const db = {
+            "edu": {
+                "labels": ["大學", "專科", "不拘", "碩士", "高中", "博士", "高職", "國小"],
+                "data": [65, 82, 72, 50, 56, 31, 50, 28]
+            },
+            "salary": {
+                "labels": ["106", "107", "108", "109", "110", "111", "112", "113"],
+                "data": [147.6, 149.9, 150.9, 152.0, 150.1, 149.9, 151.9, 153.9]
+            },
+            "vacancies": {
+                "labels": ["103", "104", "105", "106", "107", "108", "109", "110", "111", "112"],
+                "data": [20, 55, 28, 18, 30, 30, 75, 130, 175, 175]
+            },
+            "style": {
+                "labels": ["洞察力", "美感", "創意思考", "溫和寬厚", "關懷他人", "團隊合作", "挑戰", "謹慎條理", "自律", "社交", "剛強", "沉著應對", "心平氣和"],
+                "data": [88, 75, 80, 65, 68, 82, 72, 85, 83, 65, 60, 82, 86]
+            }
+        };
+
+        function renderAll() {
+            Chart.register(ChartDataLabels);
+            try {
+                // 學歷
+                new Chart(document.getElementById('educationChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: db.edu.labels,
+                        datasets: [{
+                            data: db.edu.data,
+                            backgroundColor: '#72C130',
+                            barThickness: 24
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: {
+                            padding: {
+                                top: 35
+                            }
+                        },
+                        plugins: {
+                            legend: false,
+                            datalabels: {
+                                display: true,
+                                anchor: 'end',
+                                align: 'top',
+                                offset: 8,
+                                formatter: v => v + ' %',
+                                color: '#0056b3',
+                                font: {
+                                    weight: 'bold',
+                                    size: 16
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                display: true,
+                                beginAtZero: true,
+                                max: 100,
+                                grid: {
+                                    color: '#f1f1f1'
+                                },
+                                ticks: {
+                                    display: false
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                // 薪資
+                new Chart(document.getElementById('salaryChart'), {
+                    type: 'line',
+                    data: {
+                        labels: db.salary.labels,
+                        datasets: [{
+                            data: db.salary.data,
+                            borderColor: '#0d6efd',
+                            tension: 0.1,
+                            pointRadius: 5,
+                            fill: false,
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: false,
+                            datalabels: false
+                        },
+                        scales: {
+                            y: {
+                                min: 146,
+                                max: 155,
+                                ticks: {
+                                    callback: v => v + 'K'
+                                }
+                            }
+                        }
+                    }
+                });
+                // 空缺
+                new Chart(document.getElementById('vacanciesChart'), {
+                    type: 'line',
+                    data: {
+                        labels: db.vacancies.labels,
+                        datasets: [{
+                            data: db.vacancies.data,
+                            borderColor: '#2D6A4F',
+                            tension: 0,
+                            borderWidth: 2,
+                            pointRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: false,
+                            datalabels: false
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 200
+                            }
+                        }
+                    }
+                });
+                // 風格
+                new Chart(document.getElementById('workStyleChart'), {
+                    type: 'radar',
+                    data: {
+                        labels: db.style.labels,
+                        datasets: [{
+                            data: db.style.data,
+                            backgroundColor: 'rgba(13, 110, 253, 0.2)',
+                            borderColor: '#0d6efd',
+                            borderWidth: 2,
+                            pointRadius: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: false,
+                            datalabels: false
+                        },
+                        scales: {
+                            r: {
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                                ticks: {
+                                    display: false,
+                                    stepSize: 20
+                                },
+                                grid: {
+                                    color: '#e5e7eb'
+                                },
+                                angleLines: {
+                                    color: '#e5e7eb'
+                                },
+                                pointLabels: {
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    },
+                                    color: '#666'
+                                }
+                            }
+                        }
+                    }
+                });
+            } catch (e) {
+                console.error("圖表繪製錯誤:", e);
+            }
+        }
+
+        window.onload = () => {
+            renderAll();
+            updateSubmenu(); // 初始化子選單
+        };
+    </script>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
