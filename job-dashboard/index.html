@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>軍民專長轉銜專區</title>
-   
+
     <link href="css/material-symbols-outlined.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
-    <link href="css/output.css" rel="stylesheet">
+    <link href="css/output.css?v=1" rel="stylesheet">
     <script src="js/chart.js"></script>
+    <script src="js/chartjs-chart-sankey.js"></script>
     <script src="js/chartjs-plugin-datalabels.js"></script>
+    <style>
+    </style>
 </head>
 
 <body class="bg-slate-100 min-h-screen p-4 md:p-8">
@@ -19,8 +22,7 @@
         <!-- 職務概覽 -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
             <!-- 左側紫色卡片 -->
-            <div
-                class="lg:col-span-4 bg-[#9147D2] rounded-lg p-8 text-white flex flex-col justify-center  shadow-sm">
+            <div class="lg:col-span-4 bg-[#9147D2] rounded-lg p-8 text-white flex flex-col justify-center  shadow-sm">
                 <div>
                     <h2 class="text-3xl font-bold tracking-wider">010101</h2>
                     <h1 class="text-4xl font-extrabold mt-2 pb-8">經營管理主管</h1>
@@ -67,39 +69,48 @@
                     class="border border-gray-300 rounded-md overflow-hidden flex-1 custom-scrollbar overflow-y-auto max-h-[320px]">
                     <div class="grid grid-cols-1 md:grid-cols-2 text-[#0056b3] font-medium divide-y divide-gray-100">
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
                                 class="text-sm">(專長代碼：4C00)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span></div>
+                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工部隊指揮官</span><span
                                 class="text-xs">(專長代碼：CA11)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
                                 class="text-sm">(專長代碼：4C00)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
                                 class="text-sm">(專長代碼：4C00)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span></div>
+                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工部隊指揮官</span><span
                                 class="text-xs">(專長代碼：CA11)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
                                 class="text-sm">(專長代碼：4C00)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
                                 class="text-sm">(專長代碼：4C00)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span></div>
+                            <span>聯合後勤指揮將官</span><span class="text-xs">(專長代碼：DA10)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工部隊指揮官</span><span
                                 class="text-xs">(專長代碼：CA11)</span></div>
                         <div class="p-3 px-4 flex justify-between bg-white border-r border-gray-100">
-                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span></div>
+                            <span>後勤將官</span><span class="text-sm">(專長代碼：4A00)</span>
+                        </div>
                         <div class="p-3 px-4 flex justify-between bg-white"><span>兵工將官</span><span
                                 class="text-sm">(專長代碼：4C00)</span></div>
                     </div>
@@ -230,33 +241,32 @@
                 <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
                 <h2 class="text-xl font-bold text-gray-800">轉職方向</h2>
             </div>
-            <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:items-center">
-                <!-- 來源職務 -->
-                <div
-                    class="lg:w-1/3 bg-[#cfe2ff] p-6 lg:py-8 rounded-lg flex items-center justify-center font-bold text-xl text-center shadow-sm h-fit">
-                    <span>經營管理主管</span>
-                    <!-- 電腦版向右箭頭 -->
-                    <span class="material-symbols-outlined text-blue-600 hidden lg:block">chevron_right</span>
-                    <!-- 手機版向下箭頭 -->
-                    <span class="material-symbols-outlined text-blue-600 block lg:hidden ml-2 font-black">expand_more</span>
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 space-y-4">
+                <div class="chart-wrapper" style="width:100%;height:500px">
+                    <canvas id="sankeyChart"></canvas>
                 </div>
-
-                <!-- 目標職務網格  -->
-                <div class="lg:w-2/3 grid grid-cols-2 gap-4">
-                    <div
-                        class="bg-[#e2d9f3] p-6 rounded-lg font-bold text-center text-lg flex items-center justify-center shadow-sm">
-                        業務主管</div>
-                    <div
-                        class="bg-[#c5b3f0] p-6 rounded-lg font-bold text-center text-lg flex items-center justify-center shadow-sm">
-                        行銷企劃部門主管</div>
-                    <!-- 最後一個佔滿兩欄 -->
-                    <div
-                        class="bg-[#aeece6] p-6 rounded-lg font-bold text-center text-lg col-span-2 flex items-center justify-center shadow-sm">
-                        行政總務主管</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                    <a href="javascript:;"
+                        class="py-3  bg-gray-100 hover:bg-gray-300 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">210204
+                        產品企劃主管</a>
+                    <a href="javascript:;"
+                        class="py-3  bg-gray-100 hover:bg-gray-300 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">010102
+                        管理部經理</a>
+                    <a href="javascript:;"
+                        class="py-3  bg-gray-100 hover:bg-gray-300 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">210301
+                        專案管理主管</a>
+                    <a href="javascript:;"
+                        class="py-3  bg-gray-100 hover:bg-gray-300 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">080201
+                        軟體專案主管</a>
+                    <a href="javascript:;"
+                        class="py-3  bg-gray-100 hover:bg-gray-300 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">020101
+                        業務主管</a>
+                    <a href="javascript:;"
+                        class="py-3  bg-gray-100 hover:bg-gray-300 rounded-lg flex items-center justify-center gap-2 font-bold shadow-sm hover:opacity-90 transition-all">070290
+                        其他工程研發主管</a>
                 </div>
             </div>
         </div>
-        <!-- 風格雷達圖 -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div class="lg:col-span-4 bg-white rounded-xl p-8 shadow-sm border border-gray-100 h-full space-y-4">
                 <div class="flex items-center gap-2 text-[#0d6efd]">
@@ -264,19 +274,33 @@
                     <h2 class="text-xl font-bold text-gray-800">職能基準</h2>
                 </div>
                 <ul class="space-y-4 pt-4">
-                    <li class="flex items-center gap-3 border-b border-blue-50 pb-3 font-bold text-[#0056b3] text-lg">
-                        中小型企業經理</li>
-                    <li class="flex items-center gap-3 border-b border-blue-50 pb-3 font-bold text-[#0056b3] text-lg">
-                        工業理事長</li>
+                    <li class="flex items-center gap-3 border-b border-blue-50 pb-3 font-bold  text-lg">
+                        <a href="javascript:;" class="text-[#0056b3] hover:text-blue-600">中小型企業經理</a>
+                    </li>
+                    <li class="flex items-center gap-3 border-b border-blue-50 pb-3 font-bold  text-lg">
+                        <a href="javascript:;" class="text-[#0056b3] hover:text-blue-600">工業理事長</a>
+                    </li>
                 </ul>
             </div>
             <div class="lg:col-span-8 bg-white rounded-xl p-8 shadow-sm border border-gray-100 space-y-4">
                 <div class="flex items-center gap-2 text-[#0d6efd]">
-                    <span class="material-symbols-outlined"
-                       >manufacturing</span>
-                    <h2 class="text-xl font-bold text-gray-800">工作風格</h2>
+                    <span class="material-symbols-outlined">manufacturing</span>
+                    <h2 class="text-xl font-bold text-gray-800">技術士技能檢定證照資訊</h2>
                 </div>
-                <div class="radar-chart-container lg:h-[500px] md:h-fit"><canvas id="workStyleChart"></canvas></div>
+                <div class="list-none space-y-2 pt-4 divide-y divide-gray-100 ">
+                    <a class="py-2 text-[#0056b3] hover:text-blue-600 block" href="javascript:;"><span
+                            class="material-symbols-outlined">file_save</span> 210204 產品企劃主管</a>
+                    <a class="py-2 text-[#0056b3] hover:text-blue-600 block" href="javascript:;"><span
+                            class="material-symbols-outlined">file_save</span> 010102 管理部經理</a>
+                    <a class="py-2 text-[#0056b3] hover:text-blue-600 block" href="javascript:;"><span
+                            class="material-symbols-outlined">file_save</span> 210301 專案管理主管</a>
+                    <a class="py-2 text-[#0056b3] hover:text-blue-600 block" href="javascript:;"><span
+                            class="material-symbols-outlined">file_save</span> 080201 軟體專案主管</a>
+                    <a class="py-2 text-[#0056b3] hover:text-blue-600 block" href="javascript:;"><span
+                            class="material-symbols-outlined">file_save</span> 020101 業務主管</a>
+                    <a class="py-2 text-[#0056b3] hover:text-blue-600 block" href="javascript:;"><span
+                            class="material-symbols-outlined">file_save</span> 070290 其他工程研發主管</a>
+                </div>
             </div>
         </div>
     </div>
@@ -400,9 +424,23 @@
                 "labels": ["103", "104", "105", "106", "107", "108", "109", "110", "111", "112"],
                 "data": [20, 55, 28, 18, 30, 30, 75, 130, 175, 175]
             },
-            "style": {
-                "labels": ["洞察力", "美感", "創意思考", "溫和寬厚", "關懷他人", "團隊合作", "挑戰", "謹慎條理", "自律", "社交", "剛強", "沉著應對", "心平氣和"],
-                "data": [88, 75, 80, 65, 68, 82, 72, 85, 83, 65, 60, 82, 86]
+            "sankey": {
+                "data": [
+                    { from: '210204 產品企劃主管', to: '210301 專案管理主管', flow: 48.6 },
+                    { from: '210204 產品企劃主管', to: '010102 管理部經理', flow: 51.4 },
+                    { from: '010102 管理部經理', to: '210301 專案管理主管', flow: 26.21 },
+                    { from: '010102 管理部經理', to: '020101 業務主管', flow: 25.19 },
+                    { from: '210301 專案管理主管', to: '080201 軟體專案主管', flow: 37.4 },
+                    { from: '210301 專案管理主管', to: '070290 其他工程研發主管', flow: 37.41 }
+                ],
+                "labels": {
+                    '210204 產品企劃主管': '210204 產品企劃主管',
+                    '210301 專案管理主管': '210301 專案管理主管',
+                    '010102 管理部經理': '010102 管理部經理',
+                    '020101 業務主管': '020101 業務主管',
+                    '080201 軟體專案主管': '080201 軟體專案主管',
+                    '070290 其他工程研發主管': '070290 其他工程研發主管'
+                }
             }
         };
 
@@ -410,6 +448,7 @@
             Chart.register(ChartDataLabels);
             try {
                 // 學歷
+
                 new Chart(document.getElementById('educationChart'), {
                     type: 'bar',
                     data: {
@@ -528,17 +567,28 @@
                         }
                     }
                 });
-                // 風格
-                new Chart(document.getElementById('workStyleChart'), {
-                    type: 'radar',
+
+                if (typeof ChartDataLabels !== 'undefined') {
+                    Chart.register(ChartDataLabels);
+                }
+
+                // Sankey 圖表
+                new Chart(document.getElementById('sankeyChart'), {
+                    type: 'sankey',
                     data: {
-                        labels: db.style.labels,
                         datasets: [{
-                            data: db.style.data,
-                            backgroundColor: 'rgba(13, 110, 253, 0.2)',
-                            borderColor: '#0d6efd',
-                            borderWidth: 2,
-                            pointRadius: 3
+                            label: '轉職流向',
+                            data: db.sankey.data,
+                            colorFrom: () => '#CFE2FF',
+                            colorTo: () => '#CFE2FF',
+                            colorMode: 'gradient',
+                            labels: db.sankey.labels,
+                            font: {
+                                family: 'PingFang TC, Microsoft JhengHei, sans-serif',
+                                size: 18,
+                                weight: 'bold'
+                            },
+                            padding: 60
                         }]
                     },
                     options: {
@@ -546,30 +596,18 @@
                         maintainAspectRatio: false,
                         plugins: {
                             legend: false,
-                            datalabels: false
-                        },
-                        scales: {
-                            r: {
-                                suggestedMin: 0,
-                                suggestedMax: 100,
-                                ticks: {
-                                    display: false,
-                                    stepSize: 20
-                                },
-                                grid: {
-                                    color: '#e5e7eb'
-                                },
-                                angleLines: {
-                                    color: '#e5e7eb'
-                                },
-                                pointLabels: {
-                                    font: {
-                                        size: 14,
-                                        weight: 'bold'
-                                    },
-                                    color: '#666'
+                            datalabels: false,
+                            tooltip: {
+                                callbacks: {
+                                    label: (context) => {
+                                        const item = context.dataset.data[context.dataIndex];
+                                        return `${item.from} → ${item.to}: ${item.flow}%`;
+                                    }
                                 }
                             }
+                        },
+                        layout: {
+                            padding: { left: 10, right: 10, top: 20, bottom: 20 }
                         }
                     }
                 });
@@ -577,7 +615,6 @@
                 console.error("圖表繪製錯誤:", e);
             }
         }
-
         window.onload = () => {
             renderAll();
             updateSubmenu(); // 初始化子選單
