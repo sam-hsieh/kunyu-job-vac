@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+@source "../../web/**/*.php";
+@source "../../web/**/*.html";
+@source "../../web/**/*.js";
+
+@theme {
+  --color-site-primary: oklch(45.263% 0.10872 248.494);
+  --color-site-secondary: oklch(69.73% 0.1364 246.765);
+}

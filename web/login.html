@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="container mx-auto bg-white shadow-sm border-x border-gray-100 min-h-screen py-8">
+        <div class="mt-10 sm:mx-auto max-w-sm md:max-w-2/3 lg:max-w-1/2 px-6 py-12 lg:px-8">
+            <div class="px-8 pt-8">
+                <h1 class="text-3xl font-bold text-site-primary header-underline pb-6">
+                    會員登入
+                </h1>
+            </div>
+
+            <div class="p-5 border-y-1 border-site-secondary">
+                <p>本專區專為國軍退除役官兵量身規劃，結合軍旅經驗與民間職涯需求，提供轉職資訊、就業媒合與職涯輔導服務，協助您將軍中專長無縫銜接職場，安心開啟下一段人生任務。</p>
+            </div>
+
+            <div class="mt-6">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="email" class="block font-medium text-gray-900">帳號</label>
+                        <div class="mt-2">
+                            <input id="email" type="email" name="email" required autocomplete="email"
+                                class="block w-full  bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-site-primary sm:text-sm/6" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <label for="password" class="block font-medium text-gray-900">密碼</label>
+                        </div>
+                        <div class="mt-2">
+                            <input id="password" type="password" name="password" required
+                                autocomplete="current-password"
+                                class="block w-full  bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-site-primary sm:text-sm/6" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between">
+                            <label for="captcha" class="block font-medium text-gray-900">驗證碼</label>
+
+                        </div>
+                        <div class="mt-2 flex justify-between gap-2">
+                            <input id="captcha" type="text" name="captcha" required autocomplete="off"
+                                class="block w-full  bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-site-primary sm:text-sm/6" />
+                            <div class="bg-gray-300 px-2 shrink-0 flex items-center justify-center">顯示驗證碼</div>
+                            <button type="button" class="captcha-block__refresh">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+                                    <path
+                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex place-content-center">
+                        <button type="submit"
+                            class="btn-submit bg-site-secondary hover:bg-site-primary focus-visible:outline-site-primary">登入</button>
+                    </div>
+                </form>
+                <div class="flex justify-center gap-4 my-5 p-5 border-y-1 border-site-secondary">
+                    <a href="" class="text-site-primary hover:text-blue-800">忘記密碼</a>
+                    <a href="" class="text-site-primary hover:text-blue-800">註冊會員</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

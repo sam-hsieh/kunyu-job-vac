@@ -1,0 +1,100 @@
+ :root {
+     --site-primary-color: oklch(45.263% 0.10872 248.494);
+     --site-secondary-color: oklch(69.73% 0.1364 246.765);
+ }
+
+ body {
+     font-family: 'Noto Sans TC', sans-serif;
+     background-color: #fcfcfc;
+ }
+
+ .specialty-tab {
+     width: min(250px, 50%);
+
+     &:hover {
+         background-color: color-mix(in srgb, var(--site-secondary-color), #fff 80%);
+     }
+
+ }
+
+ .specialty-tab+.specialty-tab {
+     border-left: 1px solid var(--site-secondary-color);
+
+ }
+
+ /* 頁籤下方的三角形箭頭 */
+ .active-arrow::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     border-left: 10px solid transparent;
+     border-right: 10px solid transparent;
+     border-bottom: 12px solid var(--site-primary-color);
+     /* Tailwind blue-500 */
+     z-index: 10;
+ }
+
+ /* 表格容器滾動條美化 */
+ .custom-scrollbar::-webkit-scrollbar {
+     height: 6px;
+ }
+
+ .custom-scrollbar::-webkit-scrollbar-track {
+     background: #f1f1f1;
+ }
+
+ .custom-scrollbar::-webkit-scrollbar-thumb {
+     background: #cbd5e1;
+     border-radius: 10px;
+ }
+
+ /* 藍色下底線標題 */
+ .header-underline {
+     display: inline-block;
+     position: relative;
+
+ }
+
+ .header-underline::after {
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 10px;
+     background-color: #60a5fa;
+     /* Light blue */
+ }
+
+ .swiper-button-prev::after,
+ .swiper-button-next::after {
+     font-size: min(5vmin, 24px)
+         /* 調整箭頭icon大小 */
+ }
+
+ .swiper-button-prev {
+     left: 0px;
+     /* 距離左側 10px，可自行調整 */
+     right: auto;
+ }
+
+ .swiper-button-next {
+     right: 0px;
+     /* 距離右側 10px，可自行調整 */
+     left: auto;
+ }
+
+ /* Swiper 樣式微調 */
+ /* .swiper-slide {
+            height: auto;
+            width: 50%;
+        }
+
+        @media (min-width: 768px) { 
+            .swiper-slide {
+                width: 25% !important;
+               
+            }
+        } */

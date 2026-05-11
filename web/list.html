@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>軍民專長轉職專區</title>
+    <!-- 引入 Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/output.css">
+    <!-- 引入 Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+<body>
+    <div class="container mx-auto bg-white shadow-sm border-x border-gray-100 min-h-screen py-8">
+        <!-- 圖示選單區 -->
+        <div class="service-shortcuts grid grid-cols-2 md:grid-cols-6 gap-2 place-content-center mx-3">
+            <a class="service-shortcuts__item flex place-content-center place-items-center gap-2 flex-col xl:flex-row" href="#">
+                <div class="w-[6rem]">
+                    <img class="service-shortcuts__icon block mx-auot max-w-full" src="./img/shortcuts-icon-1.svg" />
+                </div>
+                <div class="text-center">
+                    <span class="text-site-primary block"> 軍民專長</span>
+                    <span class="text-site-secondary block"> 專銜專區</span>
+                </div>
+            </a>
+            <a class="service-shortcuts__item flex place-content-center place-items-center gap-2 flex-col xl:flex-row" href="#">
+                <div class="w-[6rem]">
+                    <img class="service-shortcuts__icon block mx-auot max-w-full" src="./img/shortcuts-icon-2.svg" />
+                </div>
+                <div class="text-center">
+                    <span class="text-site-primary block"> AI就業</span>
+                    <span class="text-site-secondary block"> 專銜專區</span>
+                </div>
+
+            </a>
+            <a class="service-shortcuts__item flex place-content-center place-items-center gap-2 flex-col xl:flex-row" href="#">
+                <div class="w-[6rem]">
+                    <img class="service-shortcuts__icon block mx-auot max-w-full" src="./img/shortcuts-icon-3.svg" />
+                </div>
+                <div class="text-center">
+                    <span class="text-site-primary block"> 就業</span>
+                    <span class="text-site-secondary block"> 預約服務</span>
+                </div>
+
+            </a>
+            <a class="service-shortcuts__item flex place-content-center place-items-center gap-2 flex-col xl:flex-row" href="#">
+                <div class="w-[6rem]">
+                    <img class="service-shortcuts__icon block mx-auot max-w-full" src="./img/shortcuts-icon-4.svg" />
+                </div>
+                <div class="text-center">
+                    <span class="text-site-primary block"> 會員</span>
+                    <span class="text-site-secondary block"> 基本資料</span>
+                </div>
+
+            </a>
+            <a class="service-shortcuts__item flex place-content-center place-items-center gap-2 flex-col xl:flex-row" href="#">
+                <div class="w-[6rem]">
+                    <img class="service-shortcuts__icon block mx-auot max-w-full" src="./img/shortcuts-icon-5.svg" />
+                </div>
+                <div class="text-center">
+                    <span class="text-site-primary block"> 會員</span>
+                    <span class="text-site-secondary block"> 媒合資料</span>
+                </div>
+
+            </a>
+            <a class="service-shortcuts__item flex place-content-center place-items-center gap-2 flex-col xl:flex-row" href="#">
+                <div class="w-[6rem]">
+                    <img class="service-shortcuts__icon block mx-auot max-w-full" src="./img/shortcuts-icon-6.svg" />
+                </div>
+                <div class="text-center">
+                    <span class="text-site-primary block"> 津貼</span>
+                    <span class="text-site-secondary block"> 申請作業</span>
+                </div>
+
+            </a>
+        </div>
+        <!-- 頂部標題區 -->
+        <div class="px-8 pt-8">
+            <h1 class="text-3xl font-bold text-site-primary header-underline pb-6">
+                軍民專長轉職專區
+            </h1>
+        </div>
+        <div class="border-b border-site-secondary"></div>
+        <!-- 專長切換區 (Swiper) -->
+        <div class="relative">
+            <div class="swiper specialty-swiper">
+                <!-- Swiper Navigation 按鈕 -->
+                <div class="swiper-button-prev" style="display:none;"></div>
+                <div class="swiper-button-next" style="display:none;"></div>
+                <div class="swiper-wrapper">
+                    <!-- Active Tab 加上.active-arrow-->
+                    <div
+                        class="specialty-tab swiper-slide relative py-6 px-4 text-center active-arrow bg-white cursor-pointer">
+                        <div class="flex items-center justify-center space-x-2 text-gray-500 mb-1">
+                            <span class="text-sm">軍職專長</span>
+                            <span class="text-xl font-bold text-site-primary">後勤將官</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-sm text-gray-500">軍職代碼</span>
+                            <span class="text-xl font-bold text-site-secondary">4A00</span>
+                        </div>
+                    </div>
+
+                    <!-- Inactive Tab 1 -->
+                    <div
+                        class="specialty-tab swiper-slide relative py-6 px-4 text-center bg-white cursor-pointer opacity-60">
+                        <div class="flex items-center justify-center space-x-2 text-gray-400 mb-1">
+                            <span class="text-sm">軍職專長</span>
+                            <span class="text-xl font-bold text-gray-500">經理修護官</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-sm text-gray-400">軍職代碼</span>
+                            <span class="text-xl font-bold text-site-secondary">4B14</span>
+                        </div>
+                    </div>
+
+                    <!-- Inactive Tab 2 -->
+                    <div
+                        class="specialty-tab swiper-slide relative py-6 px-4 text-center bg-white cursor-pointer opacity-60">
+                        <div class="flex items-center justify-center space-x-2 text-gray-400 mb-1">
+                            <span class="text-sm">軍職專長</span>
+                            <span class="text-xl font-bold text-gray-500">補給督導官</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-sm text-gray-400">軍職代碼</span>
+                            <span class="text-xl font-bold text-site-secondary">4B21</span>
+                        </div>
+                    </div>
+
+                    <!-- Inactive Tab 3 -->
+                    <div class="specialty-tab swiper-slide relative py-6 px-4 text-center bg-white cursor-pointer opacity-60">
+                        <div class="flex items-center justify-center space-x-2 text-gray-400 mb-1">
+                            <span class="text-sm">軍職專長</span>
+                            <span class="text-xl font-bold text-gray-500">証購官</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-sm text-gray-400">軍職代碼</span>
+                            <span class="text-xl font-bold text-site-secondary">4B55</span>
+                        </div>
+                    </div>
+                    <!-- Inactive Tab 4 -->
+                    <div class="specialty-tab swiper-slide relative py-6 px-4 text-center bg-white cursor-pointer opacity-60">
+                        <div class="flex items-center justify-center space-x-2 text-gray-400 mb-1">
+                            <span class="text-sm">軍職專長</span>
+                            <span class="text-xl font-bold text-gray-500">証購官</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-sm text-gray-400">軍職代碼</span>
+                            <span class="text-xl font-bold text-site-secondary">4B55</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-site-secondary"></div>
+        </div>
+
+        <!-- 列表內容區 -->
+        <div class="custom-scrollbar overflow-x-auto">
+            <table class="w-full min-w-[1023px]">
+                <thead class="text-gray-600 border-b border-site-secondary">
+                    <tr class="text-[15px]">
+                        <th class="py-4 px-6 text-nowrap font-medium text-left w-[13%]">職業類別</th>
+                        <th class="py-4 px-6 text-nowrap font-medium text-left w-[15%]">職業</th>
+                        <th class="py-4 px-6 text-nowrap font-medium text-left w-[30%]">轉銜說明</th>
+                        <th class="py-4 px-6 text-nowrap font-medium text-left w-[20%]">必須證照</th>
+                        <th class="py-4 px-6 text-nowrap font-medium text-left w-[8%]">建議證照</th>
+                        <th class="py-4 px-6 text-nowrap font-medium text-left">職缺查詢</th>
+                        <th class="py-4 px-6 text-nowrap font-medium text-left">職訓班隊查詢</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                                           
+                        <tr>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr class="bg-site-secondary/5">
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr class="bg-site-secondary/5">
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr class="bg-site-secondary/5">
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr class="bg-site-secondary/5">
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                                               
+                        <tr class="bg-site-secondary/5">
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">15 物流運輸資材</span>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <div class="text-site-secondary font-medium mb-1">150108</div>
+                                <div class="text-lg font-bold text-gray-800 mb-3 leading-tight">物流中心經理</div>
+                                <a href="#"
+                                    class="inline-flex items-center space-x-1 border border-site-secondary text-site-secondary px-3 py-1.5 rounded-sm text-sm hover:bg-blue-50 transition-colors">
+                                    <span>技能資訊</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    因具備指揮管理貨品之進貨、儲存、分配及運輸能力，適合轉銜物流中心經理，並建議取得相關證照「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證照，負責運輸物流調度管理系統的建立和完善，制定物流管理制度並監督執行。
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <p class="text-gray-600 text-[14px] leading-relaxed">
+                                    財政部關務署認可之「倉儲企業供應鏈安全專責人員或自主管理專責人員」等證書
+                                </p>
+                            </td>
+                            <td class="py-12 px-6 align-top">
+                                <span class="text-gray-600 text-sm">無</span>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職缺查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職缺查詢</a>
+                                </div>
+                            </td>
+                            <td class="py-12 px-6 align-top whitespace-nowrap">
+                                <div class="flex flex-col space-y-1.5">
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">本會職訓班隊查詢</a>
+                                    <a href="#"
+                                        class="text-site-secondary text-[14px] underline hover:text-blue-700">勞動部職訓班隊查詢</a>
+                                </div>
+                            </td>
+                            </tr>
+                        
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 引入 Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.specialty-swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                freeMode: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    afterInit: function(swiper) {
+                        // 如果可以滑動才顯示 navigation
+                        const showNav = swiper.isBeginning === false || swiper.isEnd === false;
+                        document.querySelector('.swiper-button-prev').style.display = showNav ? '' : 'none';
+                        document.querySelector('.swiper-button-next').style.display = showNav ? '' : 'none';
+                    },
+                    slideChange: function(swiper) {
+                        // 動態顯示/隱藏 navigation
+                        const showNav = swiper.isBeginning === false || swiper.isEnd === false;
+                        document.querySelector('.swiper-button-prev').style.display = showNav ? '' : 'none';
+                        document.querySelector('.swiper-button-next').style.display = showNav ? '' : 'none';
+                    },
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
