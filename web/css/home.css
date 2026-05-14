@@ -1,0 +1,64 @@
+body {
+    background-color: #fcfcfc;
+}
+/* 專民專長轉職專區-title 需要放在ob.vac.gov.tw theme.css之後  */
+.block_title {
+    position: relative;
+    padding-left: 1.6em;
+    margin-bottom: 1em;
+
+    &.skills-transition {
+        padding-left: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    &.skills-transition::before {
+        background: #56B3FF;
+    }
+
+    span {
+        display: inline-block;
+        background-color: #3499E7;
+        color: #fff;
+        padding-inline: 1rem;
+        padding-block: 0.25rem;
+    }
+}
+
+#skills-transition {
+    font-family: 'Noto Sans TC', sans-serif;
+
+    .switch-tab {
+        /* px-4 py-1.5 rounded text-sm font-medium */
+        background-color: #fff;
+        color: #9ca3af;
+        border: 1px solid #e5e7eb;
+    }
+
+    .switch-tab.active-tab-arrow {
+        background-color: #88C442;
+        color: #fff;
+    }
+
+    .active-tab-arrow::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #88C442;
+        /* Same as green tab */
+    }
+}
+
+.open-cate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}

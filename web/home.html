@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>軍民專長轉職專區</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <!-- 引入 Noto Sans TC -->
+    
+    <link rel="stylesheet" href="./css/job.vac.gov.tw.css">
+    <link rel="stylesheet" href="./css/cate.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <div class="container mx-auto bg-white shadow-sm border-x border-gray-100 min-h-screen py-8" id="skills-transition">
+        <div class="block_title skills-transition">
+            <h2><span>專民專長轉職專區</span></h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+            <!-- Left Side: Search Form Section -->
+            <div class="lg:col-span-4">
+                <div class="flex items-center gap-4 mb-4 border-b-2 border-[#d66a4a] pb-2">
+                    <h1 class="text-2xl font-bold text-[#d66a4a]">軍民專長轉銜查詢</h1>
+                    <span class="bg-[#d66a4a] text-white  px-2 py-1 rounded">一般民眾</span>
+                </div>
+
+                <div class="flex items-center gap-4 mb-8 mt-6">
+                    <div class="relative">
+                        <a href="javascript:;" id="check-military" class="switch-tab  px-4 py-1.5 rounded active-tab-arrow">
+                            軍職專長
+                        </a>
+                    </div>
+                    <span class="text-gray-300">/</span>
+                    <div class="relative">
+                        <a href="javascript:;" id="check-civilian" class="switch-tab  px-4 py-1.5 rounded shadow-sm">
+                            民間職業
+                        </a>
+                    </div>
+                </div>
+                <!-- 軍職專長  -->
+                <div id="military-form" class="space-y-4">
+                    <div class="relative">
+                        <input type="text"
+                            placeholder="請輸入軍職專長關鍵字"
+                            class="w-full p-3 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-200 transition-all">
+                    </div>
+
+                    <div class="relative">
+                        <div id="open-military-cate" class="open-cate w-full p-3 pr-7 border border-gray-300 rounded-md bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-orange-200">
+                            <span>專職專長</span>
+                        </div>
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-[#d66a4a] text-white text-xl font-bold py-3 rounded-md hover:bg-[#c05a3d] transition-colors shadow-md mt-4">
+                        查詢
+                    </button>
+                </div>
+                <!--  民間職業  -->
+                <div id="civilian-form" class="space-y-4">
+                    <div class="relative">
+                        <input type="text"
+                            placeholder="請輸入民間職業關鍵字"
+                            class="w-full p-3 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-200 transition-all">
+                    </div>
+
+                    <div class="relative">
+                        <div id="open-civilian-cate" class="open-cate w-full p-3 pr-7 border border-gray-300 rounded-md bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-orange-200">
+                            <span>民間職業</span>
+                        </div>
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-[#d66a4a] text-white text-xl font-bold py-3 rounded-md hover:bg-[#c05a3d] transition-colors shadow-md mt-4">
+                        查詢
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side: Member Services Section -->
+            <div class="lg:col-span-8">
+                <div class="flex items-center gap-4 mb-4 border-b-2 border-[#3b82f6] pb-2">
+                    <h2 class="text-2xl font-bold text-[#3b82f6]">會員服務</h2>
+                    <span class="bg-[#3b82f6] text-white  px-2 py-1 rounded">退除役官兵/屆退官兵</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+
+                    <!-- Card 1: Transition Query -->
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col items-center custom-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+                        <div class="mb-6 h-40 flex items-center justify-center">
+                            <!-- Illustration Placeholder: Soldier to Professional -->
+                            <img src="./img/image-108_0_0.png" alt="軍民專長轉銜查詢" class="max-h-full">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-700 text-center">軍民專長轉銜查詢</h3>
+                    </div>
+
+                    <!-- Card 2: AI Job Service -->
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col items-center custom-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+                        <div class="mb-6 h-40 flex items-center justify-center">
+                            <!-- Illustration Placeholder: Robot -->
+                            <img src="./img/image-106_0_0.png" alt="AI就業智能服務" class="max-h-full">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-700 text-center">AI就業智能服務</h3>
+                    </div>
+
+                    <!-- Card 3: Appointment Service -->
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col items-center custom-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+                        <div class="mb-6 h-40 flex items-center justify-center relative">
+                            <!-- Illustration Placeholder: Calendar/Laptop -->
+                            <img src="./img/image-109_0_0.png" alt="就業服務預約" class="max-h-full">
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-gray-700">就業服務預約</h3>
+                            <p class="text-xs text-gray-400 mt-2">AI模擬面試 · 適性評量 · 創業及職涯諮詢</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal-vh" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm items-center justify-center p-4">
+        <div
+            class="bg-white w-full max-w-4xl h-[700px] rounded-xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in duration-200">
+
+            <!-- 上方區域：狀態與推薦 -->
+            <div class="bg-white px-6 py-4 border-b border-gray-100">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-4 text-sm">
+                        <span class="text-orange-500 font-bold">已選擇：<span id="selected-count">0</span> / 5</span>
+                        <button onclick="clearAll()" class="text-blue-500 hover:underline">清除全部</button>
+                    </div>
+                    <button onclick="toggleExpandArea()" class="text-gray-400 text-sm flex items-center gap-1">
+                        <span id="expand-text">展開</span>
+                        <svg id="expand-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- 展開後的 Tag 區域 -->
+                <div id="tag-area"
+                    class="hidden flex-wrap gap-2 mb-4 p-3 bg-gray-50 rounded-lg max-h-24 overflow-y-auto custom-scrollbar border border-gray-100">
+                    <!-- JS 動態插入 Tags -->
+                </div>
+
+                <!-- 推薦職務區 -->
+                <div class="flex items-center gap-4 py-2 border-t border-gray-50">
+                    <span class="text-sm font-bold text-gray-600 shrink-0">推薦職類</span>
+                    <div id="recommend-list" class="flex flex-wrap gap-x-6 gap-y-2">
+                        <!-- JS 動態插入推薦項目 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主內容區 -->
+            <div class="flex-1 flex overflow-hidden border-t border-gray-100">
+                <!-- 左側：主選單 -->
+                <div id="main-menu" class="w-1/3 bg-gray-50 border-r border-gray-200 overflow-y-auto custom-scrollbar">
+                    <!-- JS 動態插入 -->
+                </div>
+
+                <!-- 右側：次選單與子選單 -->
+                <div id="sub-content" class="flex-1 overflow-y-auto custom-scrollbar p-2">
+                    <!-- JS 動態插入 Accordions -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="p-4 border-t border-gray-100 flex justify-between items-center bg-gray-50/50">
+                <button onclick="alert('聯絡我們：找不到選項？')"
+                    class="text-blue-600 font-medium hover:underline text-sm">找不到選項？</button>
+                <div class="flex gap-3">
+                    <button onclick="closeModal()" class="px-6 py-2 text-gray-500 font-bold">取消</button>
+                    <button onclick="confirmFinal()"
+                        class="bg-orange-500 text-white px-10 py-2 rounded font-bold shadow-md hover:bg-orange-600 active:scale-95 transition-all">
+                        確定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 自定義訊息提示 -->
+    <div id="toast"
+        class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-full text-sm font-bold opacity-0 pointer-events-none transition-all z-[100]">
+        選項已滿，至多5個
+    </div>
+</body>
+<script src="./js/cate.js"></script>
+<script>
+    // 預設顯示 military-form，隱藏 civilian-form
+    document.addEventListener('DOMContentLoaded', function() {
+        const militaryBtn = document.getElementById('check-military');
+        const civilianBtn = document.getElementById('check-civilian');
+        const militaryForm = document.getElementById('military-form');
+        const civilianForm = document.getElementById('civilian-form');
+        const militaryOpenCate = document.getElementById('open-military-cate');
+        const civilianOpenCate = document.getElementById('open-civilian-cate');
+
+        function showMilitary() {
+            militaryForm.style.display = '';
+            civilianForm.style.display = 'none';
+            militaryBtn.classList.add('active-tab-arrow');
+            civilianBtn.classList.remove('active-tab-arrow');
+        }
+
+        function showCivilian() {
+            civilianForm.style.display = '';
+            militaryForm.style.display = 'none';
+            civilianBtn.classList.add('active-tab-arrow');
+            militaryBtn.classList.remove('active-tab-arrow');
+        }
+
+        // 預設狀態
+        showMilitary();
+
+        militaryBtn.addEventListener('click', showMilitary);
+        civilianBtn.addEventListener('click', showCivilian);
+        militaryOpenCate.addEventListener('click', () => {
+            openModal(militaryMenuData, 'open-military-cate')
+        });
+        civilianOpenCate.addEventListener('click', () => {
+            openModal(civilianMenuData, 'open-civilian-cate')
+        });
+    });
+</script>
+
+</html>

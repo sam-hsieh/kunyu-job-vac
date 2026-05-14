@@ -1,0 +1,89 @@
+ .custom-scrollbar::-webkit-scrollbar {
+     width: 6px;
+ }
+
+ .custom-scrollbar::-webkit-scrollbar-track {
+     background: transparent;
+ }
+
+ .custom-scrollbar::-webkit-scrollbar-thumb {
+     background: #ccc;
+     border-radius: 10px;
+ }
+
+ .modal-active {
+     overflow: hidden;
+ }
+
+ .transition-all {
+     transition: all 0.3s ease;
+ }
+
+ /* 隱藏原生 checkbox 樣式自定義 */
+ /* input[type="checkbox"] {
+            accent-color: #f97316;
+        } */
+
+ .accordion-content {
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.3s ease-out, padding 0.3s ease;
+ }
+
+ .accordion-content.expanded {
+     max-height: 1000px;
+     /* 足夠大的高度 */
+     transition: max-height 0.5s ease-in;
+ }
+
+ /* 手機版樣式調整 (螢幕寬度小於 768px) */
+ @media (max-width: 767px) {
+     /* 調整內容容器為滿版，並取消原本的 side-by-side 佈局 */
+     /* #modal-vh .flex-1.flex {
+        flex-direction: column;
+    } */
+
+     /* 預設：顯示主選單，隱藏次選單 */
+     #main-menu {
+         width: 100% !important;
+         display: block;
+     }
+
+     #sub-content {
+         width: 100% !important;
+         display: none;
+     }
+
+     /* 當進入次選單模式時：隱藏主選單，顯示次選單 */
+     #modal-vh.view-sub #main-menu {
+         display: none;
+     }
+
+     #modal-vh.view-sub #sub-content {
+         display: block;
+     }
+
+     /* 在次選單上方建立一個「返回所有分類」的區塊 */
+     .mobile-back-btn {
+         display: flex;
+         align-items: center;
+         padding: 12px 16px;
+         background-color: #f3f4f6;
+         color: #4b5563;
+         font-weight: bold;
+         font-size: 0.875rem;
+         cursor: pointer;
+         border-bottom: 1px solid #e5e7eb;
+     }
+
+     .mobile-back-btn svg {
+         margin-right: 8px;
+     }
+ }
+
+ /* 電腦版則隱藏返回按鈕 */
+ @media (min-width: 768px) {
+     .mobile-back-btn {
+         display: none;
+     }
+ }
