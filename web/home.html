@@ -7,7 +7,7 @@
     <title>軍民專長轉職專區</title>
     <link rel="stylesheet" href="./css/output.css">
     <!-- 引入 Noto Sans TC -->
-    
+    <link href="./css/google-font.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/job.vac.gov.tw.css">
     <link rel="stylesheet" href="./css/cate.css">
     <link rel="stylesheet" href="./css/home.css">
@@ -23,7 +23,7 @@
             <!-- Left Side: Search Form Section -->
             <div class="lg:col-span-4">
                 <div class="flex items-center gap-4 mb-4 border-b-2 border-[#d66a4a] pb-2">
-                    <h1 class="text-2xl font-bold text-[#d66a4a]">軍民專長轉銜查詢</h1>
+                    <h1 class="text-2xl font-medium text-[#d66a4a]">軍民專長轉銜查詢</h1>
                     <span class="bg-[#d66a4a] text-white  px-2 py-1 rounded">一般民眾</span>
                 </div>
 
@@ -59,7 +59,7 @@
                         </div>
                     </div>
 
-                    <button class="w-full bg-[#d66a4a] text-white text-xl font-bold py-3 rounded-md hover:bg-[#c05a3d] transition-colors shadow-md mt-4">
+                    <button class="w-full bg-[#d66a4a] text-white text-xl font-medium py-3 rounded-md hover:bg-[#c05a3d] transition-colors shadow-md mt-4">
                         查詢
                     </button>
                 </div>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
 
-                    <button class="w-full bg-[#d66a4a] text-white text-xl font-bold py-3 rounded-md hover:bg-[#c05a3d] transition-colors shadow-md mt-4">
+                    <button class="w-full bg-[#d66a4a] text-white text-xl font-medium py-3 rounded-md hover:bg-[#c05a3d] transition-colors shadow-md mt-4">
                         查詢
                     </button>
                 </div>
@@ -91,7 +91,7 @@
             <!-- Right Side: Member Services Section -->
             <div class="lg:col-span-8">
                 <div class="flex items-center gap-4 mb-4 border-b-2 border-[#3b82f6] pb-2">
-                    <h2 class="text-2xl font-bold text-[#3b82f6]">會員服務</h2>
+                    <h2 class="text-2xl font-medium text-[#3b82f6]">會員服務</h2>
                     <span class="bg-[#3b82f6] text-white  px-2 py-1 rounded">退除役官兵/屆退官兵</span>
                 </div>
 
@@ -103,7 +103,7 @@
                             <!-- Illustration Placeholder: Soldier to Professional -->
                             <img src="./img/image-108_0_0.png" alt="軍民專長轉銜查詢" class="max-h-full">
                         </div>
-                        <h3 class="text-xl font-bold text-gray-700 text-center">軍民專長轉銜查詢</h3>
+                        <h3 class="text-xl font-medium text-gray-700 text-center">軍民專長轉銜查詢</h3>
                     </div>
 
                     <!-- Card 2: AI Job Service -->
@@ -112,7 +112,7 @@
                             <!-- Illustration Placeholder: Robot -->
                             <img src="./img/image-106_0_0.png" alt="AI就業智能服務" class="max-h-full">
                         </div>
-                        <h3 class="text-xl font-bold text-gray-700 text-center">AI就業智能服務</h3>
+                        <h3 class="text-xl font-medium text-gray-700 text-center">AI就業智能服務</h3>
                     </div>
 
                     <!-- Card 3: Appointment Service -->
@@ -122,7 +122,7 @@
                             <img src="./img/image-109_0_0.png" alt="就業服務預約" class="max-h-full">
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-bold text-gray-700">就業服務預約</h3>
+                            <h3 class="text-xl font-medium text-gray-700">就業服務預約</h3>
                             <p class="text-xs text-gray-400 mt-2">AI模擬面試 · 適性評量 · 創業及職涯諮詢</p>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
             <div class="bg-white px-6 py-4 border-b border-gray-100">
                 <div class="flex justify-between items-center mb-4">
                     <div class="flex items-center gap-4 text-sm">
-                        <span class="text-orange-500 font-bold">已選擇：<span id="selected-count">0</span> / 5</span>
+                        <span class="text-orange-500 font-medium">已選擇：<span id="selected-count">0</span> / 5</span>
                         <button onclick="clearAll()" class="text-blue-500 hover:underline">清除全部</button>
                     </div>
                     <button onclick="toggleExpandArea()" class="text-gray-400 text-sm flex items-center gap-1">
@@ -163,7 +163,7 @@
 
                 <!-- 推薦職務區 -->
                 <div class="flex items-center gap-4 py-2 border-t border-gray-50">
-                    <span class="text-sm font-bold text-gray-600 shrink-0">推薦職類</span>
+                    <span class="text-sm font-medium text-gray-600 shrink-0">推薦職類</span>
                     <div id="recommend-list" class="flex flex-wrap gap-x-6 gap-y-2">
                         <!-- JS 動態插入推薦項目 -->
                     </div>
@@ -188,9 +188,9 @@
                 <button onclick="alert('聯絡我們：找不到選項？')"
                     class="text-blue-600 font-medium hover:underline text-sm">找不到選項？</button>
                 <div class="flex gap-3">
-                    <button onclick="closeModal()" class="px-6 py-2 text-gray-500 font-bold">取消</button>
+                    <button onclick="closeModal()" class="px-6 py-2 text-gray-500 font-medium">取消</button>
                     <button onclick="confirmFinal()"
-                        class="bg-orange-500 text-white px-10 py-2 rounded font-bold shadow-md hover:bg-orange-600 active:scale-95 transition-all">
+                        class="bg-orange-500 text-white px-10 py-2 rounded font-medium shadow-md hover:bg-orange-600 active:scale-95 transition-all">
                         確定
                     </button>
                 </div>
@@ -200,7 +200,7 @@
 
     <!-- 自定義訊息提示 -->
     <div id="toast"
-        class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-full text-sm font-bold opacity-0 pointer-events-none transition-all z-[100]">
+        class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-full text-sm font-medium opacity-0 pointer-events-none transition-all z-[100]">
         選項已滿，至多5個
     </div>
 </body>
