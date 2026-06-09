@@ -1,0 +1,499 @@
+#modal-vh button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* 自定義捲軸 */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+           2. 主畫面元件
+           ========================================================================== */
+.open-btn {
+    background-color: #f97316;
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+    background-color: #ea580c;
+}
+
+/* ==========================================================================
+           3. 彈出視窗外殼 (Modal Overlay & Container)
+           ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: none;
+    /* 預設隱藏，由 JS 切換為 flex */
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal-overlay.flex {
+    display: flex;
+}
+
+.modal-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 896px;
+    /* max-w-4xl */
+    height: 700px;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+           4. 上方資訊與推薦區 (Top Area & Recommendations)
+           ========================================================================== */
+.top-area {
+    background-color: #ffffff;
+    padding: 16px 24px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.status-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+}
+
+.status-count {
+    color: #f97316;
+    font-weight: bold;
+}
+
+.clear-all-btn {
+    color: #3b82f6;
+    font-size: 13px;
+}
+
+.clear-all-btn:hover {
+    text-decoration: underline;
+}
+
+.expand-toggle-btn {
+    color: #9ca3af;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+   border-radius: 0.25em;
+}
+
+.expand-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* 已選 Tag 區 */
+.tag-area {
+    display: none;
+    /* 由 JS 切換 flex */
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #f9fafb;
+    border: 1px solid #f3f4f6;
+    border-radius: 8px;
+    max-h: 96px;
+    overflow-y: auto;
+}
+
+.tag-area.flex {
+    display: flex;
+}
+
+.tag-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #ffedd5;
+    color: #ea580c;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.75em;
+    font-weight: bold;
+    border: 1px solid #fed7aa;
+}
+
+.tag-close {
+    color: #ea580c;
+    display: flex;
+    align-items: center;
+}
+
+.tag-close svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 3;
+}
+
+/* 推薦職務區 */
+.recommend-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 8px;
+    border-t: 1px solid #f9fafb;
+}
+
+.recommend-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4b5563;
+    flex-shrink: 0;
+}
+
+.recommend-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 8px;
+}
+
+.recommend-label,
+.child-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #4b5563;
+    user-select: none;
+}
+
+.recommend-label:hover,
+.child-label:hover {
+    color: #f97316;
+}
+
+.recommend-label input,
+.child-label input {
+    accent-color: #f97316;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+           5. 主內容切換區 (Sidebar & Main Content)
+           ========================================================================== */
+.main-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    border-top: 1px solid #f3f4f6;
+}
+
+/* 左側主選單 */
+.main-menu {
+    width: 33.3333%;
+    background-color: #f9fafb;
+    border-right: 1px solid #e5e7eb;
+    overflow-y: auto;
+}
+
+.menu-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+    color: #4b5563;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.menu-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.menu-btn.active {
+    background-color: #ffffff;
+    color: #f97316;
+    font-weight: bold;
+    border-right: 4px solid #f97316;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.menu-badge {
+    background-color: #f97316;
+    color: #ffffff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.menu-arrow {
+    width: 16px;
+    height: 16px;
+    opacity: 0.3;
+}
+
+.menu-btn.active .menu-arrow {
+    opacity: 1;
+}
+
+/* 右側次選單與手風琴 */
+.sub-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.accordion-section {
+    margin-bottom: 8px;
+    border: 1px solid #f3f4f6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #f9fafb;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header.active-bg {
+    background-color: rgba(249, 115, 22, 0.03);
+}
+
+.check-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+/* 自定義次選單控制方塊 */
+.check-btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #D0D4DB;
+    color: #f97316;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.sub-title {
+    font-weight: bold;
+    color: #374151;
+    flex: 1;
+    padding: 4px 0;
+}
+
+.accordion-arrow {
+    width: 20px;
+    height: 20px;
+    color: #9ca3af;
+    transition: transform 0.3s ease;
+}
+
+.accordion-arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* 手風琴內容展開折疊動畫 */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #ffffff;
+}
+
+.accordion-content.expanded {
+    max-height: 1000px;
+    border-top: 1px dashed #f3f4f6;
+    padding: 16px;
+}
+
+.child-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.child-label input {
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================================================
+           6. 下方頁尾 (Footer)
+           ========================================================================== */
+.modal-footer {
+    padding: 16px;
+    border-top: 1px solid #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(249, 250, 251, 0.5);
+}
+
+.footer-link {
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.cancel-btn {
+    padding: 8px 24px;
+    color: #6b7280;
+    font-weight: bold;
+}
+
+.confirm-btn {
+    background-color: #f97316;
+    color: #ffffff;
+    padding: 8px 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.confirm-btn:hover {
+    background-color: #ea580c;
+}
+
+.confirm-btn:active {
+    transform: scale(0.95);
+}
+
+/* 滿額提示 Toast */
+.toast {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+/* ==========================================================================
+           7. 手機版響應式 RWD 樣式與返回鍵邏輯
+           ========================================================================== */
+.mobile-back-btn {
+    display: none;
+    /* 電腦版隱藏 */
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e7eb;
+    user-select: none;
+}
+
+.mobile-back-btn svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+    .main-body {
+        flex-direction: column;
+    }
+
+    .main-menu {
+        width: 100% !important;
+        display: block;
+    }
+
+    .sub-content {
+        width: 100% !important;
+        display: none;
+        /* 手機初始隱藏次選單 */
+    }
+
+    /* 手機進入次選單狀態 */
+    .modal-container.view-sub .main-menu {
+        display: none;
+    }
+
+    .modal-container.view-sub .sub-content {
+        display: block;
+    }
+
+    .modal-container.view-sub .mobile-back-btn {
+        display: flex;
+    }
+}

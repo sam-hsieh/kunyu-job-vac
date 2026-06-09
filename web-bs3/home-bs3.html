@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>軍民專長轉銜查詢</title>
+    <link rel="stylesheet" href="https://job.vac.gov.tw/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://job.vac.gov.tw/css/theme.css">
+    <link rel="stylesheet" href="https://job.vac.gov.tw/css/style.css">
+    <link rel="stylesheet" href="./css/cate-vh.css">
+    <link rel="stylesheet" href="./css/home-bs3.css">
+</head>
+
+<body>
+    <div class="home container " style="background-color: #fff; padding-block: 2em;">
+    <div id="skills-transition">
+        <div class="block_title skills-transition">
+            <h2><span>專民專長轉職專區</span></h2>
+        </div>
+        <div class="vh-page">
+            <div class="vh-layout">
+                <section class="vh-search-panel">
+                    <div class="vh-heading vh-heading--orange">
+                        <h1>軍民專長轉銜查詢</h1>
+                        <span class="vh-badge vh-badge--orange">一般民眾</span>
+                    </div>
+
+                    <div class="vh-tab-row">
+                        <div class="vh-tab-wrap">
+                            <a href="javascript:;" id="check-military" class="vh-tab active-tab-arrow">軍職專長</a>
+                        </div>
+                        <span class="vh-divider">/</span>
+                        <div class="vh-tab-wrap">
+                            <a href="javascript:;" id="check-civilian" class="vh-tab">民間職能</a>
+                        </div>
+                    </div>
+
+                    <div id="military-form" class="vh-form">
+                        <div class="vh-field">
+                            <input type="text" class="vh-input" placeholder="請輸入軍職專長關鍵字">
+                        </div>
+                        <div class="vh-field">
+                            <div id="open-military-cate" class="vh-select" aria-label="選擇軍職專長">
+                                <span>軍職專長</span>
+                            </div>
+                            <svg class="vh-select-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <button class="vh-button" type="button">查詢</button>
+                    </div>
+                    <div id="civilian-form" class="vh-form" hidden>
+                        <div class="vh-field">
+                            <input type="text" class="vh-input" placeholder="請輸入民間職能關鍵字">
+                        </div>
+                        <div class="vh-field">
+                            <div id="open-civilian-cate" class="vh-select" tabindex="0" role="button"
+                                aria-label="選擇民間職能">
+                                <span>民間職能</span>
+                            </div>
+                            <svg class="vh-select-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <button class="vh-button" type="button">查詢</button>
+                    </div>
+                </section>
+
+                <section class="vh-service-panel">
+                    <div class="vh-heading vh-heading--blue">
+                        <h2>會員服務</h2>
+                        <span class="vh-badge vh-badge--blue">退除役官兵/屆退官兵</span>
+                    </div>
+
+                    <div class="vh-card-grid">
+                        <a href="javascript:;" class="vh-card">
+                            <div class="vh-card-figure">
+                                <img src="./img/image-108_0_0.png" alt="軍民專長轉銜查詢">
+                            </div>
+                            <h3>軍民專長轉銜查詢</h3>
+                        </a>
+
+                        <a href="javascript:;" class="vh-card">
+                            <div class="vh-card-figure">
+                                <img src="./img/image-106_0_0.png" alt="AI就業智能服務">
+                            </div>
+                            <h3>AI就業智能服務</h3>
+                        </a>
+
+                        <a href="javascript:;" class="vh-card">
+                            <div class="vh-card-figure">
+                                <img src="./img/image-109_0_0.png" alt="就業服務預約">
+                            </div>
+                            <h3>就業服務預約</h3>
+                            <p>AI模擬面試 · 適性評量 · 創業及職涯諮詢</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="modal-vh-overlay" class="modal-overlay">
+            <div id="modal-container-box" class="modal-container">
+
+                <div class="top-area">
+                    <div class="status-row">
+                        <div class="status-info">
+                            <span class="status-count">已選擇：<span id="selected-count">0</span> / 5</span>
+                            <button onclick="clearAll()" class="clear-all-btn">清除全部</button>
+                        </div>
+                        <button onclick="toggleExpandArea()" class="expand-toggle-btn">
+                            <span id="expand-text">展開</span>
+                            <svg id="expand-icon" class="expand-icon" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div id="tag-area" class="tag-area custom-scrollbar"></div>
+
+                    <div class="recommend-row">
+                        <span class="recommend-title">推薦職類</span>
+                        <div id="recommend-list" class="recommend-list"></div>
+                    </div>
+                </div>
+
+                <div class="main-body">
+                    <div id="main-menu" class="main-menu custom-scrollbar"></div>
+
+                    <div id="sub-content" class="sub-content custom-scrollbar"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="#" onclick="alert('聯絡我們：找不到選項？'); return false;" class="footer-link">找不到選項？</a>
+                    <div class="footer-btns">
+                        <button onclick="closeModal()" class="cancel-btn">取消</button>
+                        <button onclick="confirmFinal()" class="confirm-btn">確定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast" class="toast">選項已滿，至多5個</div>
+    </div>
+    </div>
+
+    <script src="./js/cate.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const militaryBtn = document.getElementById("check-military");
+            const civilianBtn = document.getElementById("check-civilian");
+            const militaryForm = document.getElementById("military-form");
+            const civilianForm = document.getElementById("civilian-form");
+            const militaryOpenCate = document.getElementById("open-military-cate");
+            const civilianOpenCate = document.getElementById("open-civilian-cate");
+
+            function showMilitary() {
+
+                militaryForm.hidden = false;
+                civilianForm.hidden = true;
+                militaryBtn.classList.add("active-tab-arrow");
+                civilianBtn.classList.remove("active-tab-arrow");
+            }
+
+            function showCivilian() {
+                civilianForm.hidden = false;
+                militaryForm.hidden = true;
+                civilianBtn.classList.add("active-tab-arrow");
+                militaryBtn.classList.remove("active-tab-arrow");
+            }
+
+            showMilitary();
+
+            militaryBtn.addEventListener("click", showMilitary);
+            civilianBtn.addEventListener("click", showCivilian);
+            militaryOpenCate.addEventListener("click", function () {
+
+                openModal(militaryMenuData, "open-military-cate");
+            });
+            civilianOpenCate.addEventListener("click", function () {
+                openModal(civilianMenuData, "open-civilian-cate");
+            });
+        });
+    </script>
+</body>
+
+</html>
