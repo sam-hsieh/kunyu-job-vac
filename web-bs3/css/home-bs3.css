@@ -241,6 +241,11 @@
 #skills-transition .vh-form {
     display: flex;
     flex-direction: column;
+
+    &#military-form {
+        gap: 10px;
+    }
+
     gap: 20px;
 }
 
