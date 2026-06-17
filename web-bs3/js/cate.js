@@ -5,8 +5,8 @@ const militaryMenuData = [
         subs: [
             {
                 name: "戰鬥官科",
-                items: ["步兵指揮將官", "機械化步兵指揮官", "裝甲兵指揮將官", "裝甲部隊指揮官", "砲兵指揮將官", "野戰砲兵指揮官", "火箭防空砲兵指揮官", "飛彈部隊指揮官", "航空指揮將官", "艦艇指揮官"]
-            },
+                items: ["步兵指揮將官", "機械化步兵指揮官", "裝甲兵指揮將官", "裝甲部隊指揮官", "砲兵指揮將官", "野戰砲兵指揮官", "火箭防空砲兵指揮官", "飛彈部隊指揮官", "航空指揮將官", "艦艇指揮官","1步兵指揮將官", "1機械化步兵指揮官", "1裝甲兵指揮將官", "1裝甲部隊指揮官", "1砲兵指揮將官", "1野戰砲兵指揮官", "1火箭防空砲兵指揮官", "1飛彈部隊指揮官", "1航空指揮將官", "1艦艇指揮官","2步兵指揮將官", "2機械化步兵指揮官", "2裝甲兵指揮將官", "2裝甲部隊指揮官", "2砲兵指揮將官", "2野戰砲兵指揮官", "2火箭防空砲兵指揮官", "2飛彈部隊指揮官", "2航空指揮將官", "2艦艇指揮官","3步兵指揮將官", "3機械化步兵指揮官", "3裝甲兵指揮將官", "3裝甲部隊指揮官", "3砲兵指揮將官", "3野戰砲兵指揮官", "3火箭防空砲兵指揮官", "3飛彈部隊指揮官", "3航空指揮將官", "3艦艇指揮官"]	
+			},
             {
                 name: "戰鬥勤務官科",
                 items: ["化學兵指揮將官", "化學兵指揮官", "工兵指揮將官"]
@@ -211,12 +211,39 @@ function renderSidebar() {
 }
 
 function toggleAccordion(subName) {
-    if (expandedSubs.has(subName)) {
-        expandedSubs.delete(subName);
-    } else {
-        expandedSubs.add(subName);
+    const section = document.querySelector(`.accordion-section[data-sub-name="${CSS.escape(subName)}"]`);
+    if (!section) {
+        if (expandedSubs.has(subName)) {
+            expandedSubs.delete(subName);
+        } else {
+            expandedSubs.add(subName);
+        }
+        renderContent();
+        return;
     }
-    renderContent();
+
+    const header = section.querySelector('.accordion-header');
+    const content = section.querySelector('.accordion-content');
+    const arrow = section.querySelector('.accordion-arrow');
+    const isExpandedNow = expandedSubs.has(subName);
+
+    if (isExpandedNow) {
+        expandedSubs.delete(subName);
+        header.classList.remove('active-bg');
+        arrow.classList.remove('rotate');
+        content.style.maxHeight = `${content.scrollHeight}px`;
+        requestAnimationFrame(() => {
+            content.classList.remove('expanded');
+            content.style.maxHeight = '0px';
+        });
+        return;
+    }
+
+    expandedSubs.add(subName);
+    header.classList.add('active-bg');
+    arrow.classList.add('rotate');
+    content.classList.add('expanded');
+    content.style.maxHeight = `${content.scrollHeight}px`;
 }
 
 function renderContent() {
@@ -245,6 +272,7 @@ function renderContent() {
 
         const section = document.createElement('div');
         section.className = "accordion-section";
+        section.dataset.subName = sub.name;
 
         const header = document.createElement('div');
         header.className = `accordion-header ${isExpanded ? 'active-bg' : ''}`;
@@ -281,6 +309,8 @@ function renderContent() {
         section.appendChild(header);
         section.appendChild(content);
         container.appendChild(section);
+
+        content.style.maxHeight = isExpanded ? `${content.scrollHeight}px` : '0px';
     });
 }
 

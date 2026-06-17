@@ -136,7 +136,7 @@
     background-color: #f9fafb;
     border: 1px solid #f3f4f6;
     border-radius: 8px;
-    max-h: 96px;
+    max-height: 96px;
     overflow-y: auto;
 }
 
@@ -175,7 +175,7 @@
     align-items: center;
     gap: 16px;
     padding-top: 8px;
-    border-t: 1px solid #f9fafb;
+    border-top: 1px solid #f9fafb;
 }
 
 .recommend-title {
@@ -359,7 +359,6 @@
 }
 
 .accordion-content.expanded {
-    max-height: 1000px;
     border-top: 1px dashed #f3f4f6;
     padding: 16px;
 }
