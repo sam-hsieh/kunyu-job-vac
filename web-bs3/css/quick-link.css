@@ -1,0 +1,44 @@
+#quick-link {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    grid-template-areas:
+        "child-1 child-2 child-3 child-4"
+        "child-1 child-2 child-3 child-5";
+}
+
+#quick-link .child-1 {
+    grid-area: child-1;
+}
+
+#quick-link .child-2 {
+    grid-area: child-2;
+}
+
+#quick-link .child-3 {
+    grid-area: child-3;
+}
+
+#quick-link .child-4 {
+    grid-area: child-4;
+}
+
+#quick-link .child-5 {
+    grid-area: child-5;
+}
+
+#quick-link .child-6 {
+    grid-area: child-6;
+}
+@media (max-width: 768px) {
+    #quick-link {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "child-1"
+            "child-2"
+            "child-3"
+            "child-4"
+            "child-5"
+            "child-6";
+    }
+}
